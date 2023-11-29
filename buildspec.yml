@@ -4,11 +4,11 @@ phases:
   build:
     commands:
       - echo Entered the build phase...
-      - mvn clean package
+      - ./gradlew bootJar
     post_build:
       commands:
         - echo Build completed successfully
 artifacts:
   files:
-    - target/sample-code-build-1.jar
+    - build/libs/kotlin-restapis.jar
   discard-paths: yes
